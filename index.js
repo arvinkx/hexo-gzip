@@ -19,7 +19,7 @@ hexo.extend.console.register( 'gzip', 'gzip content', function( args, callback) 
                   var inp = fs.createReadStream(currentFile);
                   var out = fs.createWriteStream(currentFile);
                   inp.pipe(gzip).pipe(out);
-                  log.info(currentFile+'.gz');
+                  log.info(currentFile);
                }
             }
            else if (stats.isDirectory()) {
