@@ -14,7 +14,7 @@ hexo.extend.console.register( 'gzip', 'gzip content', function( args, callback) 
             var currentFile = currentPath + '/' + files[i];
             var stats = fs.statSync(currentFile);
             if (stats.isFile()) {
-               if(currentFile.match(/\.(ico|html|js|css|json|xml|ttf|eot|ott|woff|svg)$/)) {
+               if(currentFile.match(/\.(js|css|json)$/)) {
                   var gzip = zlib.createGzip();
                   var inp = fs.createReadStream(currentFile);
                   var out = fs.createWriteStream(currentFile+'.gz');
